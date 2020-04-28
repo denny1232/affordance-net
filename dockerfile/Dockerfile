@@ -48,6 +48,7 @@ RUN cd $AffordanceNet_ROOT/lib && pwd && \
                 scikit-image \
                 protobuf \
                 easydict \
+                PyYAML \
                 opencv-python && \
     make 
 
@@ -55,3 +56,4 @@ RUN cd $AffordanceNet_ROOT/lib && pwd && \
 ENV PYTHONPATH="$AffordanceNet_ROOT/caffe-affordance-net/python:$PYTHONPATH"
 
 RUN cd $AffordanceNet_ROOT
+cd ..-
