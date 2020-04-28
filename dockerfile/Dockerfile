@@ -56,5 +56,3 @@ RUN cd $AffordanceNet_ROOT/lib && pwd && \
 
 ENV PYTHONPATH="$AffordanceNet_ROOT/caffe-affordance-net/python:$PYTHONPATH"
 
-RUN cd $AffordanceNet_ROOT
-cd ..-
