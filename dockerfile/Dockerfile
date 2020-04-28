@@ -32,7 +32,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 
 ENV CPATH="/usr/include/hdf5/serial/"
 
-RUN cd && git clone https://github.com/denny1232/affordance-net.git && \
+RUN cd && pwd && git clone https://github.com/denny1232/affordance-net.git && \
     cd affordance-net/caffe-affordance-net && \
     cp Makefile.config.example Makefile.config && \
     make -j8 && make pycaffe
@@ -42,7 +42,7 @@ RUN cd && git clone https://github.com/denny1232/affordance-net.git && \
 ENV AffordanceNet_ROOT="/root/affordance-net"
 
 # make cython
-RUN cd $Affordance_ROOT/lib && \
+RUN cd $AffordanceNet_ROOT/lib && pwd && \
     pip install --upgrade pip && \
     pip install cython \
                 scikit-image \

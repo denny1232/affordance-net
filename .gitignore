@@ -4,6 +4,7 @@
 *.caffemodel
 *.project
 *.pydevproject
+*.kate-swp
 
 # folders
 pretrained
